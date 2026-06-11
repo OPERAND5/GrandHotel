@@ -1,0 +1,243 @@
+/* ==========================================
+   MODERN COUTURE BOOKING & CALENDAR MODULAR SYSTEM
+   ========================================== */
+
+/* Main outer section wrapper */
+.booking-calendar-wrapper {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr; /* Asymmetric balance for visual focus */
+  gap: 50px;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+}
+
+/* Stacks blocks cleanly on mid-to-small device viewports */
+@media (max-width: 900px) {
+  .booking-calendar-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* --- Premium Panel Blueprint Base --- */
+.booking-form-box, 
+.calendar-availability-box {
+  background: #ffffff;
+  border: 1px solid #e9e9e9;
+  border-radius: 12px;
+  padding: 45px 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+  box-sizing: border-box;
+}
+
+/* --- Left Column: Form Styling Framework --- */
+.booking-form-box h2 {
+  font-size: 1.6rem;
+  color: #111111;
+  margin: 0 0 35px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+/* Subtle underlying geometric accent line below card header */
+.booking-form-box h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #c5a880;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #c5a880;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+/* Standardizing Form Input Nodes */
+.form-group input[type="date"], 
+.form-group select {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #2c2c2c;
+  box-sizing: border-box;
+  background-color: #fafafa;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* High-contrast active focus indicators */
+.form-group input[type="date"]:focus, 
+.form-group select:focus {
+  border-color: #c5a880;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(197, 168, 128, 0.1);
+}
+
+/* Premium Primary Submission Key */
+.btn-submit-booking {
+  width: 100%;
+  padding: 18px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+.btn-submit-booking:hover {
+  background-color: #c5a880;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(197, 168, 128, 0.25);
+}
+
+/* --- Right Column: Availability Matrix Layout --- */
+.calendar-header-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.calendar-header-info h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+  color: #1a1a1a;
+  letter-spacing: 0.5px;
+}
+
+.calendar-rate {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.calendar-rate span {
+  font-size: 0.8rem;
+  color: #888888;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.calendar-month-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1a1a1a;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Grid Matrix for Calendar Cells */
+.interactive-calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px; /* Enhanced air spacing between dates */
+  text-align: center;
+}
+
+.calendar-day-name {
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: #aaaaaa;
+  padding: 5px 0 15px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Styling Individual Date Blocks */
+.calendar-date-number {
+  color: #333333;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px; /* Tall, premium layout square aspect */
+  box-sizing: border-box;
+  transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Smooth micro-interaction on hover */
+.calendar-date-number:not(.selected-day):hover {
+  background-color: #fcfbfa;
+  border-color: #c5a880;
+  color: #c5a880;
+  transform: scale(1.05);
+}
+
+/* Top-stacked validation tick icon element */
+.tick-icon {
+  height: 14px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: transparent;
+  margin-bottom: 4px;
+}
+
+.day-num {
+  line-height: 1;
+}
+
+/* --- THE PASSIVE/ACTIVE CALENDAR SHADING INFUSION STATE --- */
+.calendar-date-number.selected-day {
+  background: linear-gradient(135deg, #d4bc9c 0%, #c5a880 100%) !important; /* Premium gradient shimmer */
+  color: #ffffff !important;
+  border-color: #c5a880 !important;
+  font-weight: 600;
+  box-shadow: 0 6px 15px rgba(197, 168, 128, 0.35);
+}
+
+.calendar-date-number.selected-day .tick-icon {
+  color: #ffffff !important;
+}
+
+.calendar-date-number.selected-day .tick-icon::before {
+  content: "✔";
+}
+
+.calendar-instruction {
+  font-size: 0.75rem;
+  color: #999999;
+  margin-top: 25px;
+  font-style: italic;
+  line-height: 1.4;
+  text-align: center;
+}

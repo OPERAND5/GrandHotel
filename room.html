@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rooms | The Grand Hotel</title>
+  <!-- Font Awesome CDN Link for Navigation Arrows and Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- custom css link -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- NAVBAR (Left untouched) -->
+    <nav class="navbar">
+      <div class="nav-logo">
+        <a href="#">THE GRAND<span>HOTEL</span></a>
+      </div>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="room.html" class="dropbtn">Rooms <span class="arrow">&#9662;</span></a>
+            <ul class="dropdown-content">
+              <li><a href="standard.html">Standard Room</a></li>
+              <li><a href="#">Deluxe Room</a></li>
+              <li><a href="#">Luxury Room</a></li>
+              <li><a href="#">Executive Room</a></li>
+            </ul>
+          </li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="#">Facilities</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Job</a></li>
+        </ul>
+        <a href="#" class="btn-book">Book Now</a>
+      </div>
+    </nav>
+
+    <!-- MAIN AMENITIES & ROOMS SECTION -->
+    <main class="amenities-section">
+      <!-- Centered Header Block -->
+      <div class="amenities-header">
+        <p class="section-subtitle">ACCOMMODATIONS</p>
+        <h1>Our Room Collection</h1>
+        <p class="section-desc">Discover the exceptional amenities that make your stay unforgettable. Our thoughtfully designed accommodations offer a perfect blend of comfort, style, and modern features tailored to your needs.</p>
+      </div>
+
+      <!-- Grid wrapper containing 2 items per row -->
+      <div class="amenities-grid">
+        
+        <!-- Standard Room Card (Gets Letter 'S') -->
+        <div class="amenities-list standard-card">
+          <div>
+            <p class="card-badge">ESSENTIAL COMFORT</p>
+            <h1>Standard Room</h1>
+            <ul>
+              <li>Premium Bedding</li>
+              <li>High-Speed Wi-Fi</li>
+              <li>Smart TV with Streaming Services</li>
+              <li>Mini Bar</li>
+            </ul>
+          </div>
+          <div>
+            <p class="room-price">₦15,000/NIGHT</p>
+            <a href="standard.html" class="btn-back">View Details</a>
+          </div>
+        </div>
+
+        <!-- Deluxe Room Card (Gets Letter 'D') -->
+        <div class="amenities-list deluxe-card">
+          <div>
+            <p class="card-badge">ENHANCED COMFORT</p>
+            <h1>Deluxe Room</h1>
+            <ul>
+              <li>Premium Bedding</li>
+              <li>High-Speed Wi-Fi</li>
+              <li>Smart TV with Streaming Services</li>
+              <li>Garden View</li>
+            </ul>
+          </div>
+          <div>
+            <p class="room-price">₦25,000/NIGHT</p>
+            <a href="index.html" class="btn-back">View Details</a>
+          </div>
+        </div>
+
+        <!-- Luxury Suite Card (Gets Letter 'L') -->
+        <div class="amenities-list luxury-card">
+          <div>
+            <p class="card-badge">PREMIUM EXPERIENCE</p>
+            <h1>Luxury Suite</h1>
+            <ul>
+              <li>Premium Bedding</li>
+              <li>High-Speed Wi-Fi</li>
+              <li>Spa Bath</li>
+              <li>Ocean View</li>
+            </ul>
+          </div>
+          <div>
+            <p class="room-price">₦50,000/NIGHT</p>
+            <a href="index.html" class="btn-back">View Details</a>
+          </div>
+        </div>
+
+        <!-- Executive Suite Card (Gets Letter 'E') -->
+        <div class="amenities-list executive-card">
+          <div>
+            <p class="card-badge">EXCLUSIVE LUXURY</p>
+            <h1>Executive Suite</h1>
+            <ul>
+              <li>Premium Bedding</li>
+              <li>High-Speed Wi-Fi</li>
+              <li>Luxury Bath</li>
+              <li>Panoramic View</li>
+            </ul>
+          </div>
+          <div>
+            <p class="room-price">₦100,000/NIGHT</p>
+            <a href="index.html" class="btn-back">View Details</a>
+          </div>
+        </div>
+      </div> 
+    </main>
+
+    <div class="table-container">
+    <table class="amenities-table">
+      <thead>
+        <tr>
+          <th class="feature-header">Features & Amenities</th>
+          <th>Standard</th>
+          <th>Deluxe</th>
+          <th>Luxury</th>
+          <th>Executive</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="feature-name">Free High-Speed Wi-Fi</td>
+          <td class="status-tick">✔</td>
+          <td class="status-tick">✔</td>
+          <td class="status-tick">✔</td>
+          <td class="status-tick">✔</td>
+        </tr>
+        <tr>
+          <td class="feature-name">Work Desk</td>
+          <td class="status-tick">✔</td>
+          <td class="status-tick">✔</td>
+          <td class="status-tick">✔</td>
+          <td class="status-tick">✔</td>
+        </tr>
+        <tr>
+          <td class="feature-name">Smart TV with Streaming</td>
+          <td class="status-tick">✔</td>
+          <td class="status-tick">✔</td>
+          <td class="status-tick">✔</td>
+          <td class="status-tick">✔</td>
+        </tr>
+        <tr>
+          <td class="feature-name">Premium Coffee Machine</td>
+          <td class="status-cancel">❌</td>
+          <td class="status-tick">✔</td>
+          <td class="status-tick">✔</td>
+          <td class="status-tick">✔</td>
+        </tr>
+        <tr>
+          <td class="feature-name">Complimentary Minibar</td>
+          <td class="status-cancel">❌</td>
+          <td class="status-cancel">❌</td>
+          <td class="status-tick">✔</td>
+          <td class="status-tick">✔</td>
+        </tr>
+        <tr>
+          <td class="feature-name">Separate Living Area</td>
+          <td class="status-cancel">❌</td>
+          <td class="status-cancel">❌</td>
+          <td class="status-tick">✔</td>
+          <td class="status-tick">✔</td>
+        </tr>
+        <tr>
+          <td class="feature-name">24/7 Room Service</td>
+          <td class="status-cancel">❌</td>
+          <td class="status-cancel">❌</td>
+          <td class="status-tick">✔</td>
+          <td class="status-tick">✔</td>
+        </tr>
+        <tr>
+          <td class="feature-name">Executive Lounge Access</td>
+          <td class="status-cancel">❌</td>
+          <td class="status-cancel">❌</td>
+          <td class="status-cancel">❌</td>
+          <td class="status-tick">✔</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Want a reservation? Let's do it now!</p>
+    <a href="https://wa.me/2349034534003" class="btn-book">Talk to the Customer service</a>
+
+    <!-- FOOTER SECTION (Left untouched) -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-column brand-info">
+          <h2>THE GRAND<span>HOTEL</span></h2>
+          <p>Experience exceptional hospitality in the heart of the city, where every detail has been meticulously crafted for your comfort.</p>
+        </div>
+        <div class="footer-column services-links">
+          <h3>Customer Service</h3>
+          <ul>
+            <li><a href="#">Inquiries & Reservations</a></li>
+            <li><a href="#">24/7 Guest Assistance</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-column contact-info">
+          <h3>Stay Connected</h3>
+          <p>Subscribe to receive exclusive offers, updates, and luxury travel inspiration.</p>
+          <form class="footer-newsletter">
+            <input type="email" placeholder="Your Email Address" required />
+            <button type="submit">→</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Grand Hotel. All rights reserved.</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com" aria-label="Facebook"><img src="assets/facebook.png" alt="Facebook" /></a>
+          <a href="https://www.twitter.com" aria-label="Twitter"><img src="assets/twitter.png" alt="Twitter" /></a>
+          <a href="https://www.instagram.com" aria-label="Instagram"><img src="assets/instagram.png" alt="Instagram" /></a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>

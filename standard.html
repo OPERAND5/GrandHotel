@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="t.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Standard Room | The Grand Hotel</title>
+</head>
+<body>
+
+    <div class="container">
+        <nav class="navbar">
+            <div class="nav-logo">
+                <a href="#">THE GRAND<span>HOTEL</span></a>
+            </div>
+
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Rooms <span class="arrow">&#9662;</span></a>
+                        <ul class="dropdown-content">
+                            <li><a href="#">Standard Room</a></li>
+                            <li><a href="#">Deluxe Room</a></li>
+                            <li><a href="#">Luxury Room</a></li>
+                            <li><a href="#">Executive Room</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="#">Facilities</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Job</a></li>
+                </ul>
+                <a href="#" class="btn-book">Book Now</a>
+            </div>
+        </nav>
+
+        <main class="standard-room-section">
+            <div class="room-header">
+                <h1>Standard Room Booking</h1>
+                <p>Manage your stay and review real-time availability fields below.</p>
+            </div>
+            <section class="room-details">
+    <div class="luxury-gallery-container">
+        
+        <div class="gallery-thumbs-stack">
+            
+            <div class="thumb-wrapper active" onclick="updateShowcase(this)">
+                <img src="assets/standardBEd.jpg" alt="Standard Bed View">
+                <div class="thumb-overlay">
+                    <span class="thumb-meta">Item 1/3</span>
+                    <p class="thumb-title">Standard Bed View</p>
+                </div>
+            </div>
+            
+            <div class="thumb-wrapper" onclick="updateShowcase(this)">
+                <img src="assets/standardRestroom.jpg" alt="Standard Restroom View">
+                <div class="thumb-overlay">
+                    <span class="thumb-meta">Item 2/3</span>
+                    <p class="thumb-title">Standard Restroom View</p>
+                </div>
+            </div>
+
+            <div class="thumb-wrapper" onclick="updateShowcase(this)">
+                <img src="assets/standardTable.jpg" alt="Standard Desk View">
+                <div class="thumb-overlay">
+                    <span class="thumb-meta">Item 3/3</span>
+                    <p class="thumb-title">Standard Desk View</p>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="gallery-main-showcase">
+            <img id="premiumShowcaseTarget" src="assets/standardBEd.jpg" alt="Room Main View">
+            <div class="showcase-caption-bar">
+                <h3 id="showcaseTitleTarget">Standard Bed View</h3>
+            </div>
+        </div>
+    </div>
+  </section>
+    </div>
+
+  <section class="room-info-showcase">
+    <div class="info-block description-box">
+        <h2 class="hotel-section-title">The Space</h2>
+        <div class="title-divider"></div>
+        <p class="hotel-description-text">
+            <strong>Standard Room:</strong> Crafted with a minimalist design for maximum comfort. Features a premium <span class="highlight-text">6.5ft × 4.5ft</span> bed and a spacious <span class="highlight-text">9.10ft × 10ft</span> floor plan. Designed to comfortably accommodate up to 2 guests, inclusive of high-speed wireless internet and a daily complimentary breakfast.
+        </p>
+    </div>
+
+    <div class="info-block amenities-box">
+        <h2 class="hotel-section-title">Amenities & Comforts</h2>
+        <div class="title-divider"></div>
+        <ul class="hotel-amenities-list">
+            <li><span class="amenity-icon">✦</span> Air Conditioning</li>
+            <li><span class="amenity-icon">✦</span> Free High-Speed Wi-Fi</li>
+            <li><span class="amenity-icon">✦</span> Smart Flat-screen TV</li>
+            <li><span class="amenity-icon">✦</span> Fully Stocked Mini Fridge</li>
+            <li><span class="amenity-icon">✦</span> Premium Tea & Coffee Maker</li>
+        </ul>
+    </div>
+</section>
+            <section class="booking-calendar-wrapper">
+                <div class="booking-form-box">
+                    <h2>Book Your Room</h2>
+                    <form class="hotel-booking-form" id="bookingForm" onsubmit="event.preventDefault();">
+                        
+                        <div class="form-group">
+                            <label for="checkin">Check-In Date</label>
+                            <input type="date" id="checkin" min="2026-06-01" max="2026-06-30" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="checkout">Check-Out Date</label>
+                            <input type="date" id="checkout" min="2026-06-01" max="2026-06-30" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="guests">Number of Guests</label>
+                            <select id="guests" required>
+                                <option value="" disabled selected>Select number of guests</option>
+                                <option value="1">1 Guest</option>
+                                <option value="2">2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn-submit-booking">Check Availability</button>
+                    </form>
+                </div>
+
+                <div class="calendar-availability-box">
+                    <div class="calendar-header-info">
+                        <h3>Room Availability</h3>
+                        <p class="calendar-rate">₦15,000 <span>/ Night</span></p>
+                    </div>
+                    
+                    <div class="calendar-month-title">June 2026</div>
+                    
+                    <div class="interactive-calendar">
+                        <div class="calendar-day-name">Su</div>
+                        <div class="calendar-day-name">Mo</div>
+                        <div class="calendar-day-name">Tu</div>
+                        <div class="calendar-day-name">We</div>
+                        <div class="calendar-day-name">Th</div>
+                        <div class="calendar-day-name">Fr</div>
+                        <div class="calendar-day-name">Sa</div>
+
+                        <div class="calendar-empty"></div>
+
+                        <div class="calendar-date-number" data-day="1"><span class="tick-icon"></span><span class="day-num">1</span></div>
+                        <div class="calendar-date-number" data-day="2"><span class="tick-icon"></span><span class="day-num">2</span></div>
+                        <div class="calendar-date-number" data-day="3"><span class="tick-icon"></span><span class="day-num">3</span></div>
+                        <div class="calendar-date-number" data-day="4"><span class="tick-icon"></span><span class="day-num">4</span></div>
+                        <div class="calendar-date-number" data-day="5"><span class="tick-icon"></span><span class="day-num">5</span></div>
+                        <div class="calendar-date-number" data-day="6"><span class="tick-icon"></span><span class="day-num">6</span></div>
+                        <div class="calendar-date-number" data-day="7"><span class="tick-icon"></span><span class="day-num">7</span></div>
+                        <div class="calendar-date-number" data-day="8"><span class="tick-icon"></span><span class="day-num">8</span></div>
+                        <div class="calendar-date-number" data-day="9"><span class="tick-icon"></span><span class="day-num">9</span></div>
+                        <div class="calendar-date-number" data-day="10"><span class="tick-icon"></span><span class="day-num">10</span></div>
+                        <div class="calendar-date-number" data-day="11"><span class="tick-icon"></span><span class="day-num">11</span></div>
+                        <div class="calendar-date-number" data-day="12"><span class="tick-icon"></span><span class="day-num">12</span></div>
+                        <div class="calendar-date-number" data-day="13"><span class="tick-icon"></span><span class="day-num">13</span></div>
+                        <div class="calendar-date-number" data-day="14"><span class="tick-icon"></span><span class="day-num">14</span></div>
+                        <div class="calendar-date-number" data-day="15"><span class="tick-icon"></span><span class="day-num">15</span></div>
+                        <div class="calendar-date-number" data-day="16"><span class="tick-icon"></span><span class="day-num">16</span></div>
+                        <div class="calendar-date-number" data-day="17"><span class="tick-icon"></span><span class="day-num">17</span></div>
+                        <div class="calendar-date-number" data-day="18"><span class="tick-icon"></span><span class="day-num">18</span></div>
+                        <div class="calendar-date-number" data-day="19"><span class="tick-icon"></span><span class="day-num">19</span></div>
+                        <div class="calendar-date-number" data-day="20"><span class="tick-icon"></span><span class="day-num">20</span></div>
+                        <div class="calendar-date-number" data-day="21"><span class="tick-icon"></span><span class="day-num">21</span></div>
+                        <div class="calendar-date-number" data-day="22"><span class="tick-icon"></span><span class="day-num">22</span></div>
+                        <div class="calendar-date-number" data-day="23"><span class="tick-icon"></span><span class="day-num">23</span></div>
+                        <div class="calendar-date-number" data-day="24"><span class="tick-icon"></span><span class="day-num">24</span></div>
+                        <div class="calendar-date-number" data-day="25"><span class="tick-icon"></span><span class="day-num">25</span></div>
+                        <div class="calendar-date-number" data-day="26"><span class="tick-icon"></span><span class="day-num">26</span></div>
+                        <div class="calendar-date-number" data-day="27"><span class="tick-icon"></span><span class="day-num">27</span></div>
+                        <div class="calendar-date-number" data-day="28"><span class="tick-icon"></span><span class="day-num">28</span></div>
+                        <div class="calendar-date-number" data-day="29"><span class="tick-icon"></span><span class="day-num">29</span></div>
+                        <div class="calendar-date-number" data-day="30"><span class="tick-icon"></span><span class="day-num">30</span></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-container">
+                <div class="footer-column brand-info">
+                    <h2>THE GRAND<span>HOTEL</span></h2>
+                    <p>Experience exceptional hospitality in the heart of the city, where every detail has been meticulously crafted for your comfort.</p>
+                </div>
+
+                <div class="footer-column services-links">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Inquiries & Reservations</a></li>
+                        <li><a href="#">24/7 Guest Assistance</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column contact-info">
+                    <h3>Stay Connected</h3>
+                    <p>Subscribe to receive exclusive offers, updates, and luxury travel inspiration.</p>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Your Email Address" required />
+                        <button type="submit">→</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 The Grand Hotel. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" aria-label="Facebook"><img src="assets/facebook.png" alt="FB" /></a>
+                    <a href="https://www.twitter.com" aria-label="Twitter"><img src="assets/twitter.png" alt="X" /></a>
+                    <a href="https://www.instagram.com" aria-label="Instagram"><img src="assets/instagram.png" alt="IG" /></a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

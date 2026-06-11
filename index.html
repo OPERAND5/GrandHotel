@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Website Navbar</title>
+    <!-- custom css link -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <!-- Logo Area -->
+        <div class="nav-logo">
+          <a href="#">THE GRAND<span>HOTEL</span></a>
+        </div>
+
+        <!-- Navigation Links and Button Container -->
+        <div class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+
+            <!-- Rooms Dropdown -->
+            <li class="dropdown">
+              <a href="#" class="dropbtn"
+                >Rooms <span class="arrow">&#9662;</span></a
+              >
+              <ul class="dropdown-content">
+                <li><a href="standard.html">Standard Room</a></li>
+                <li><a href="#">Deluxe Room</a></li>
+                <li><a href="#">Luxury Room</a></li>
+                <li><a href="#">Executive Room</a></li>
+              </ul>
+            </li>
+
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="#">Facilities</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Job</a></li>
+          </ul>
+
+          <!-- Book Now Button -->
+          <a href="#" class="btn-book">Book Now</a>
+        </div>
+      </nav>
+
+      <!-- HOME SECTION -->
+
+      <div class="home">
+        <div class="homeMini">
+          <h2>LUXURY & <span>COMFORT</span></h2>
+          <p>
+            Experience exceptional hospitality in the heart of the city, where
+            every detail has been meticulously crafetd for your comfort.
+          </p>
+          <div class="list">
+            <ul>
+              <li>Premium Amenities</li>
+              <li>Central Location</li>
+              <li>Superb Restaurant</li>
+              <li>WiFi 24/7</li>
+            </ul>
+
+            <h3>RESERVE YOUR STAY</h3>
+          </div>
+        </div>
+
+        <section class="amenities-section">
+          <div class="varieties">
+            <div class="card-grid">
+              <div class="feature-card">Pool</div>
+              <div class="feature-card">Dining</div>
+              <div class="feature-card">Hall</div>
+              <div class="feature-card">Rooms</div>
+            </div>
+          </div>
+        </section>
+      </div>
+<section>
+  <div class="booking-wrapper">
+    <form id="bookingForm" class="booking-container">
+      
+      <div class="booking-column">
+        <label class="booking-label" for="checkIn">Check-In Date</label>
+        <input type="date" id="checkIn" class="booking-input" required>
+      </div>
+
+      <div class="booking-column">
+        <label class="booking-label" for="checkOut">Check-Out Date</label>
+        <input type="date" id="checkOut" class="booking-input" required>
+      </div>
+
+      <div class="booking-column">
+        <label class="booking-label">Children</label>
+        <div class="counter-group">
+          <button type="button" class="counter-btn" id="decrementChildren">−</button>
+          <span class="counter-value" id="childrenValue">0</span>
+          <button type="button" class="counter-btn" id="incrementChildren">+</button>
+        </div>
+      </div>
+
+      <div class="booking-column">
+        <label class="booking-label">Adults</label>
+        <div class="counter-group">
+          <button type="button" class="counter-btn" id="decrementAdults">−</button>
+          <span class="counter-value" id="adultsValue">1</span>
+          <button type="button" class="counter-btn" id="incrementAdults">+</button>
+        </div>
+      </div>
+
+      <div class="booking-btn-column">
+        <button type="submit" class="submit-btn">Check Availability</button>
+      </div>
+    </form>
+</section>
+
+<section>
+  <div class="experience">
+    <h2>– EXPERIENCE <span>THE BEST STAY</span></h2>
+    <p>
+      Discover the epitome of luxury and comfort at our hotel, where every
+      moment is crafted to perfection. From our elegantly designed rooms to
+      our world-class amenities, we offer an unforgettable experience for all
+      our guests. Whether you're here for business or leisure, our dedicated
+      staff is committed to providing exceptional service to ensure your stay
+      is nothing short of extraordinary. Indulge in fine dining, relax in our
+      spa, or explore the vibrant surroundings – your perfect getaway awaits.
+
+    </p>
+
+        <div class="list">
+            <ul>
+              <li>Best Rate Guarantee</li>
+              <li>Free Wifi</li>
+              <li>Online Booking</li>
+              <li>24/7 Support</li>
+            </ul>
+            <a href="room.html" class="btn-back">View all Accomodation</a>
+            <!-- <button class="btn-book">View all Accommodations</button> -->
+          </div>
+  </div>
+
+  <div class="rooms">
+    <div class="standard">
+      <p>Standard Room</p>
+      <p>Experience comfort and elegance in our standard rooms, perfect for a relaxing stay.</p>
+      <button class="btn-book">View Room</button>
+    </div>
+    <div class="deluxe">
+      <p>Deluxe Room</p>
+      <p>Enjoy enhanced amenities and spacious layouts in our deluxe rooms.</p>
+      <button class="btn-book">View Room</button>
+    </div>
+    <div class="luxury">
+      <p>Luxury Room</p>
+      <p>Indulge in the ultimate luxury experience with our premium luxury rooms.</p>
+      <button class="btn-book">View Room</button>       
+    </div>
+    <div class="executive">
+      <p>Executive Room</p>
+      <p>Experience unparalleled comfort and sophistication in our executive rooms.</p>
+      <button class="btn-book">View Room</button>
+    </div>
+  </div>
+</section>
+<section>
+  <p class="section-title">Inviting peaceful atmosphere</p>
+  <h1>Our facility</h1>
+  <img src="assets/pool.png" alt="pool Image" class="pool-image" />
+  <p>pool</p>
+  <img src="assets/dining.jpg" alt="dining Image" class="dining-image" />
+  <p>Dining</p>
+  <img src="assets/hall.jpg" alt="hall Image" class="hall-image" />
+  <p>Hall</p>
+  <img src="assets/rooms.jpg" alt="rooms Image" class="rooms-image" />
+  <p>Rooms</p>
+  <img src="assets/spa.jpg" alt="spa Image" class="spa-image" />
+  <p>spa</p>
+  <img src="assets/gym.jpg" alt="gym Image" class="gym-image" />
+  <p>gym</p>
+  <img src="assets/lobby.jpg" alt="lobby Image" class="lobby-image" />
+  <p>lobby</p>
+  <img src="assets/restaurant.jpg" alt="restaurant Image" class="restaurant-image" />
+  <p>restaurant</p>
+  <img src="assets/bar.jpg" alt="bar Image" class="bar-image" />
+  <p>bar</p>
+  <img src="assets/conference.jpg" alt="conference Image" class="conference-image" />
+  <p>conference</p>
+</section>
+
+<section>
+  <h1>What people are saying about our services</h1>
+  <div class="testimonials">
+    <div class="testimonial-card">
+      <p>"An unforgettable experience! The staff was incredibly attentive, and the amenities were top-notch. Highly recommend!"</p>
+      <h3>- John Doe</h3>
+    </div>
+    <div class="testimonial-card">
+      <p>"The perfect blend of luxury and comfort. The rooms were spacious and beautifully designed. I can't wait to return!"</p>
+      <h3>- Jane Smith</h3>
+    </div>
+    <div class="testimonial-card">
+      <p>"Exceptional service and a truly memorable stay. The dining options were fantastic, and the location was ideal."</p>
+      <h3>- Michael Brown</h3>
+    </div>
+</section>
+
+<section>
+  <footer class="site-footer">
+  <div class="footer-container">
+    
+    <div class="footer-column brand-info">
+      <h2>THE GRAND<span>HOTEL</span></h2>
+      <p>Experience exceptional hospitality in the heart of the city, where every detail has been meticulously crafted for your comfort.</p>
+    </div>
+
+    <div class="footer-column services-links">
+      <h3>Customer Service</h3>
+      <ul>
+        <li><a href="#">Inquiries & Reservations</a></li>
+        <li><a href="#">24/7 Guest Assistance</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column contact-info">
+      <h3>Stay Connected</h3>
+      <p>Subscribe to receive exclusive offers, updates, and luxury travel inspiration.</p>
+      <form class="footer-newsletter">
+        <input type="email" placeholder="Your Email Address" required />
+        <button type="submit">→</button>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+  <p>&copy; 2026 The Grand Hotel. All rights reserved.</p>
+
+  <div class="social-icons">
+    <a href="https://www.facebook.com" aria-label="Facebook"><img src="assets/facebook.png" alt="Facebook" /></a>
+    <a href="https://www.twitter.com" aria-label="Twitter"><img src="assets/twitter.png" alt="Twitter" /></a>
+    <a href="https://www.instagram.com" aria-label="Instagram"><img src="assets/instagram.png" alt="Instagram" /></a>
+  </div>
+</div>
+</section>
+
+<script src="script.js"></script>
+      
+    </div>
+  </body>
+</html>
