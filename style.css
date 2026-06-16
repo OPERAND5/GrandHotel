@@ -1,6 +1,9 @@
 /* ==========================================================================
    1. RESET & BASE STYLES
    ========================================================================== */
+
+   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -2097,10 +2100,6 @@ section:has(.testimonials) h1 {
 }
 
 
-
-/* Import Luxury Typography Framework from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
-
 /* Structural Container Framework — limits width so it doesn't stretch too wide */
 .room-info-wrapper {
     display: flex;
@@ -2321,7 +2320,50 @@ section:has(.testimonials) h1 {
   font-style: italic;
   line-height: 1.4;
   text-align: center;
+}/* --- Premium Call-to-Action Button --- */
+.btn-book-now {
+    display: inline-block;
+    font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;        /* Crucial for the luxury brand look */
+    letter-spacing: 2px;              /* Elegant spacing between letters */
+    color: #ffffff;
+    background-color: #c5a880;         /* Grand Hotel signature gold */
+    padding: 16px 38px;
+    border: 2px solid #c5a880;
+    border-radius: 4px;               /* Crisp, slightly rounded upscale edge */
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth luxury fluid transition */
+    box-shadow: 0 4px 15px rgba(197, 168, 128, 0.2);   /* Soft golden ambient glow */
+    cursor: pointer;
 }
+
+/* --- Interactive Hover Effect --- */
+.btn-book-now:hover {
+    background-color: #111111;         /* Dramatic switch to rich dark charcoal */
+    border-color: #111111;
+    color: #c5a880;                   /* Text gracefully shifts to gold */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);       /* Subtle premium physical lift */
+}
+
+/* --- Click/Tap Animation --- */
+.btn-book-now:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Optional Centering Container Utility --- */
+.button-action-container {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centers button horizontally if used standalone */
+    margin-top: 25px;
+}
+
+
 
 
 

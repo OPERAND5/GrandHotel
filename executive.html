@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="t.css">
     <link rel="stylesheet" href="style.css">
-    <title>Luxury Room | The Grand Hotel</title>
+    <title>Executive Room | The Grand Hotel</title>
 </head>
 <body>
 
@@ -19,7 +19,7 @@
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropbtn">Rooms <span class="arrow">&#9662;</span></a>
+                        <a href="room.html" class="dropbtn">Rooms <span class="arrow">&#9662;</span></a>
                         <ul class="dropdown-content">
                             <li><a href="standard.html">Standard Room</a></li>
                             <li><a href="deluxe.html">Deluxe Room</a></li>
@@ -30,7 +30,7 @@
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="facilities.html">Facilities</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="jobs.html">Job</a></li>
+                    <li><a href="job.html">Job</a></li>
                 </ul>
                 <a href="booking.html" class="btn-book">Book Now</a>
             </div>
@@ -38,7 +38,7 @@
 
         <main class="luxury-room-section">
             <div class="room-header">
-                <h1>Luxury Room Booking</h1>
+                <h1>Executive Room Booking</h1>
                 <p>Manage your stay and review real-time availability fields below.</p>
             </div>
             <section class="room-details">
@@ -46,34 +46,34 @@
                     
                     <div class="gallery-thumbs-stack">
                         <div class="thumb-wrapper active" onclick="updateShowcase(this)">
-                            <img src="assets/luxurybed.jpg" alt="Standard Bed View">
+                            <img src="assets/executivebed.jpg" alt="Executive Bed View">
                             <div class="thumb-overlay">
                                 <span class="thumb-meta">Item 1/3</span>
-                                <p class="thumb-title">Luxury Bed View</p>
+                                <p class="thumb-title">Executive Bed View</p>
                             </div>
                         </div>
                         
                         <div class="thumb-wrapper" onclick="updateShowcase(this)">
-                            <img src="assets/luxuryRestroom.jpg" alt="Standard Restroom View">
+                            <img src="assets/executiverestroom.jpg" alt="Executive Restroom View">
                             <div class="thumb-overlay">
                                 <span class="thumb-meta">Item 2/3</span>
-                                <p class="thumb-title">Luxury Restroom View</p>
+                                <p class="thumb-title">Executive Restroom View</p>
                             </div>
                         </div>
 
                         <div class="thumb-wrapper" onclick="updateShowcase(this)">
-                            <img src="assets/luxurytable.jpg" alt="Standard Desk View">
+                            <img src="assets/executiveTable.jpg" alt="Executive Desk View">
                             <div class="thumb-overlay">
                                 <span class="thumb-meta">Item 3/3</span>
-                                <p class="thumb-title">Luxury Desk View</p>
+                                <p class="thumb-title">Executive Desk View</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="gallery-main-showcase">
-                        <img id="premiumShowcaseTarget" src="assets/luxurybed.jpg" alt="Room Main View">
+                        <img id="premiumShowcaseTarget" src="assets/executivebed.jpg" alt="Room Main View">
                         <div class="showcase-caption-bar">
-                            <h3 id="showcaseTitleTarget">Luxury Bed View</h3>
+                            <h3 id="showcaseTitleTarget">Executive Bed View</h3>
                         </div>
                     </div>
                 </div>
@@ -84,7 +84,7 @@
                     <h2 class="hotel-section-title">The Space</h2>
                     <div class="title-divider"></div>
                     <p class="hotel-description-text">
-                        <strong>Luxury Room:</strong> Crafted with a minimalist design for maximum comfort. Features a premium, with the most peaceful and serene environment. <span class="highlight-text">6.5ft × 4.5ft</span> bed and a spacious <span class="highlight-text">9.10ft × 10ft</span> floor plan. Designed to comfortably accommodate up to 2 guests, inclusive of high-speed wireless internet and a daily complimentary breakfast.
+                        <strong>Executive Room:</strong> Crafted with a minimalist design for maximum comfort. Features a premium, with the most peaceful and serene environment. <span class="highlight-text">6.5ft × 4.5ft</span> bed and a spacious <span class="highlight-text">9.10ft × 10ft</span> floor plan. Designed to comfortably accommodate up to 2 guests, inclusive of high-speed wireless internet and a daily complimentary breakfast.
                     </p>
                 </div>
 
@@ -97,6 +97,8 @@
                         <li><span class="amenity-icon">✦</span> Smart Flat-screen TV</li>
                         <li><span class="amenity-icon">✦</span> Fully Stocked Mini Fridge</li>
                         <li><span class="amenity-icon">✦</span> ocean view</li>
+                        <li><span class="amenity-icon">✦</span> In-room Safe</li>
+                        <li><span class="amenity-icon">✦</span> Free massage offer</li>
                         <li><span class="amenity-icon">✦</span> intercontinental dishes</li>
                     </ul>
                 </div>
@@ -128,12 +130,10 @@
                             </select>
                         </div>
 
-                        <!-- Error Alert Window Box Component -->
                         <div id="calendarError" style="display: none; color: #e53e3e; font-size: 0.85rem; margin-bottom: 10px; font-weight: 500;"></div>
 
                         <div class="button-action-container">
-                            <!-- Added an ID to target this specific room action link component -->
-                            <a href="Availabilty.html" id="submitBookingBtn" class="btn-book-now">Check Availability</a>
+                            <a href="Availability.html" id="submitBookingBtn" class="btn-book-now">Check Availability</a>
                         </div>
                     </form>
                 </div>
@@ -141,12 +141,11 @@
                 <div class="calendar-availability-box">
                     <div class="calendar-header-info">
                         <h3>Room Availability</h3>
-                        <p class="calendar-rate">₦100,000 <span>/ Night</span></p>
+                        <p class="calendar-rate">₦200,000 <span>/ Night</span></p>
                     </div>
                     
                     <div class="calendar-month-title">June 2026</div>
                     
-                    <!-- Added inline styling to clarify interactive items -->
                     <div class="interactive-calendar" style="cursor: pointer;">
                         <div class="calendar-day-name">Su</div>
                         <div class="calendar-day-name">Mo</div>
@@ -233,82 +232,85 @@
 
     <script src="script.js"></script>
     <script>
-        // DOM Node References
+        // DOM Elements
         const checkInInput = document.getElementById('checkin');
         const checkOutInput = document.getElementById('checkout');
         const errorBanner = document.getElementById('calendarError');
         const bookingLinkBtn = document.getElementById('submitBookingBtn');
         const calendarCells = document.querySelectorAll('.calendar-date-number');
 
-        // Formats days to a standard 'YYYY-MM-DD' query-friendly layout template
+        // Helper function: Convert plain digits into a clean June 2026 YYYY-MM-DD template
         function constructDateString(dayNumber) {
             const parsed = parseInt(dayNumber, 10);
             const zeroPaddedDay = parsed < 10 ? '0' + parsed : parsed;
             return `2026-06-${zeroPaddedDay}`;
         }
 
-        // Monitors elements and modifies properties on the active anchor component
+        // Core URL Builder function: Regenerates the link with active selections dynamically
         function syncUrlParameters() {
             const inVal = checkInInput.value;
             const outVal = checkOutInput.value;
             
-            // Set parameters explicitly onto the query string architecture
-            bookingLinkBtn.href = `test.html?room=luxury&checkin=${inVal}&checkout=${outVal}`;
+            // Build fresh parameters onto the link destination
+            bookingLinkBtn.href = `test.html?room=executive&checkin=${inVal}&checkout=${outVal}`;
         }
 
-        // Input mutation listener loops
+        // Listen for manual inputs too, just in case they change them via the keyboard fields
         checkInInput.addEventListener('change', () => {
             if (checkInInput.value) checkOutInput.min = checkInInput.value;
             syncUrlParameters();
         });
         checkOutInput.addEventListener('change', syncUrlParameters);
 
-        // --- VISUAL GRID SELECTION ENGINE ---
+        // --- INTERACTIVE VISUAL CALENDAR SELECTION LOGIC ---
         calendarCells.forEach(cell => {
             cell.addEventListener('click', function() {
                 const targetDay = this.getAttribute('data-day');
                 const generatedIsoDate = constructDateString(targetDay);
 
-                // Check-in initialization sequence
+                // Phase 1: No Check-In set yet OR fresh complete reset requested
                 if (!checkInInput.value || (checkInInput.value && checkOutInput.value)) {
                     checkInInput.value = generatedIsoDate;
-                    checkOutInput.value = ""; 
+                    checkOutInput.value = ""; // Erase past check-out data
                     errorBanner.style.display = "none";
 
+                    // Clear previous CSS cell backgrounds and highlight the selected check-in day
                     calendarCells.forEach(c => c.style.background = "");
-                    this.style.background = "#cbd5e0"; // Highlight target cell structural asset
+                    this.style.background = "#cbd5e0"; // Soft check-in color
                 } 
-                // Check-out secondary verification chain
+                // Phase 2: User has selected Check-In and is now assigning Check-Out
                 else if (checkInInput.value && !checkOutInput.value) {
+                    // Check if they accidentally picked an earlier or identical date
                     if (new Date(generatedIsoDate) <= new Date(checkInInput.value)) {
                         checkInInput.value = generatedIsoDate;
                         calendarCells.forEach(c => c.style.background = "");
                         this.style.background = "#cbd5e0";
                     } else {
                         checkOutInput.value = generatedIsoDate;
-                        this.style.background = "#4a5568"; 
+                        this.style.background = "#4a5568"; // Strong check-out color
                         errorBanner.style.display = "none";
                     }
                 }
 
+                // Synchronize the destination booking URL right away
                 syncUrlParameters();
             });
         });
 
-        // Intercept navigation lifecycle steps if parameters break logic rules
+        // Click Interceptor: Stops the navigation if dates are completely missing or broken
         bookingLinkBtn.addEventListener('click', function(e) {
             const inVal = checkInInput.value;
             const outVal = checkOutInput.value;
 
             if (!inVal || !outVal) {
-                e.preventDefault();
+                e.preventDefault(); // Lock the redirect
                 errorBanner.textContent = "Please choose both Check-In and Check-Out dates using the calendar grid before continuing.";
                 errorBanner.style.display = "block";
                 return;
             }
 
             if (new Date(outVal) <= new Date(inVal)) {
-                e.preventDefault();
+                e.preventDefault(); // Lock the redirect
                 errorBanner.textContent = "Error: Check-out date must occur after the Check-in date.";
                 errorBanner.style.display = "block";
             }

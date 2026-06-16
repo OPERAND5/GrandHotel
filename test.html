@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Your Stay | The Grand Hotel</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap');
+
+        :root {
+            --luxury-cream: #fdfbf7;
+            --warm-espresso: #2c221e;
+            --gold-accent: #cca43b;
+            --bg-light: #f6f4f0;
+            --card-white: #ffffff;
+            --text-dark: #3a312e;
+            --text-muted: #8c827d;
+            --border-grey: #e8e4de;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 4rem 1rem;
+        }
+
+        .booking-container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 2.5rem;
+            background-color: var(--card-white);
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(44, 34, 30, 0.04);
+            border: 1px solid var(--border-grey);
+        }
+
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--warm-espresso);
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .form-section {
+            border-bottom: 1px solid var(--border-grey);
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--warm-espresso);
+            border-left: 4px solid var(--gold-accent);
+            padding-left: 0.75rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .grid-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1rem; }
+
+        .input-group { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem; }
+        
+        .input-group label { font-size: 0.75rem; font-weight: 800; color: var(--warm-espresso); text-transform: uppercase; }
+
+        .input-group input, .input-group select {
+            padding: 0.8rem;
+            border: 1.5px solid var(--border-grey);
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        /* --- BOLD HERO PRICE DISPLAY --- */
+        .summary-section {
+            background-color: var(--luxury-cream);
+            padding: 2.2rem;
+            border-radius: 8px;
+            border: 1px solid rgba(204, 164, 59, 0.3);
+        }
+
+        .total-display { text-align: right; border-right: 4px solid var(--gold-accent); padding-right: 1.5rem; }
+
+        .price-tag {
+            font-size: 3.2rem;
+            font-weight: 900;
+            color: var(--warm-espresso);
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.2rem;
+            background-color: var(--warm-espresso);
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            font-weight: 800;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="booking-container">
+        <h2 class="title">Complete Your Booking</h2>
+        <form id="bookingForm">
+            
+            <section class="form-section">
+                <h3>1. Stay Details</h3>
+                <div class="grid-2col">
+                    <div class="input-group">
+                        <label>Check-in</label>
+                        <input type="date" id="checkIn" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Check-out</label>
+                        <input type="date" id="checkOut" required>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>Room Type</label>
+                    <select id="roomType">
+                        <option value="25000">Standard (₦25,000/night)</option>
+                        <option value="50000">Deluxe (₦50,000/night)</option>
+                        <option value="100000">Luxury (₦100,000/night)</option>
+                        <option value="200000">Executive (₦200,000/night)</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h3>2. Guest Details</h3>
+                <div class="grid-2col">
+                    <div class="input-group"><label>First Name</label><input type="text" required></div>
+                    <div class="input-group"><label>Last Name</label><input type="text" required></div>
+                </div>
+                <div class="input-group"><label>Email Address</label><input type="email" required></div>
+            </section>
+
+            <section class="form-section">
+                <h3>3. Payment Method</h3>
+                <div style="display:flex; gap: 1rem;">
+                    <label><input type="radio" name="pay" checked> Card</label>
+                    <label><input type="radio" name="pay"> PayPal</label>
+                </div>
+            </section>
+
+            <section class="summary-section">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <p>Total for <span id="stayNights">0</span> nights:</p>
+                    <div class="total-display">
+                        <span style="font-weight:900; text-transform:uppercase; display:block; margin-bottom:0.2rem;">Amount Due</span>
+                        <span class="price-tag" id="amountDue">₦0</span>
+                    </div>
+                </div>
+                <label style="display:block; margin-top:1rem; font-size:0.8rem;">
+                    <input type="checkbox" required> I agree to the Terms and Conditions.
+                </label>
+                <button type="submit" class="submit-btn">Complete Order</button>
+            </section>
+        </form>
+    </div>
+
+    <script>
+        const checkIn = document.getElementById('checkIn');
+        const checkOut = document.getElementById('checkOut');
+        const roomType = document.getElementById('roomType');
+        const amountDue = document.getElementById('amountDue');
+        const stayNights = document.getElementById('stayNights');
+
+        function updatePrice() {
+            const start = new Date(checkIn.value);
+            const end = new Date(checkOut.value);
+            const nights = Math.max(0, Math.ceil((end - start) / (1000 * 60 * 60 * 24)));
+            
+            stayNights.textContent = nights;
+            amountDue.textContent = `₦${(nights * parseInt(roomType.value)).toLocaleString()}`;
+        }
+        [checkIn, checkOut, roomType].forEach(el => el.addEventListener('change', updatePrice));
+    </script>
+</body>
+</html>

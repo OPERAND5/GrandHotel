@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact Us | The Grand Hotel</title>
+    <style>
+        /* --- GOOGLE FONTS IMPORT --- */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800;900&display=swap');
+
+        /* --- STYLING VARIABLES (Luxury Cream & Warm Espresso Theme) --- */
+        :root {
+            --luxury-cream: #fdfbf7;      /* Primary Light Theme Hero BG */
+            --warm-espresso: #2c221e;     /* Deep Rich Accent Typography replacing Black */
+            --gold-accent: #cca43b;
+            --gold-hover: #b38f2e;
+            --focus-gold: rgba(204, 164, 59, 0.2);
+            --bg-light: #f6f4f0;          /* Soft architectural background */
+            --card-white: #ffffff;
+            --text-dark: #3a312e;         /* Softened dark gray/brown for content readability */
+            --text-muted: #8c827d;
+            --border-grey: #e8e4de;
+            --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* --- HERO SPLASH (TOTALLY CHANGED FROM BLACK) --- */
+        .contact-hero {
+            text-align: center;
+            padding: 6.5rem 1.5rem 5rem 1.5rem;
+            background-color: var(--luxury-cream); /* Beautiful light champagne background */
+            color: var(--warm-espresso);          /* Sophisticated dark bronze typography */
+            border-bottom: 1px solid var(--border-grey);
+            position: relative;
+        }
+
+        .hero-inner-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+
+        .contact-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
+            margin: 0 0 1rem 0;
+            letter-spacing: -0.5px;
+            color: var(--warm-espresso);
+        }
+
+        .contact-hero p {
+            font-size: clamp(0.85rem, 2vw, 1.1rem);
+            color: var(--gold-accent);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin: 0;
+        }
+
+        /* --- SPLIT LAYOUT WRAPPER --- */
+        .main-content {
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 1.5rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        @media (max-width: 1024px) {
+            .contact-grid {
+                gap: 2.5rem;
+            }
+            .main-content {
+                padding: 4rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 850px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        /* --- LEFT SIDE: DETAILED CHANNELS --- */
+        .info-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .info-card {
+            background-color: var(--card-white);
+            padding: clamp(2rem, 4vw, 3rem);
+            border-radius: 12px;
+            border: 1px solid var(--border-grey);
+            box-shadow: 0 20px 40px rgba(44, 34, 30, 0.03);
+            transition: var(--transition-smooth);
+        }
+
+        .info-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 30px 50px rgba(44, 34, 30, 0.06);
+        }
+
+        .info-card h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 800;
+            font-size: clamp(1.4rem, 3vw, 1.8rem);
+            color: var(--warm-espresso);
+            margin-top: 0;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 0.75rem;
+        }
+
+        .info-card h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--gold-accent);
+        }
+
+        .contact-detail-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+            margin-bottom: 1.75rem;
+        }
+
+        .contact-detail-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .icon-box {
+            font-size: 1.3rem;
+            color: var(--gold-accent);
+            background: rgba(204, 164, 59, 0.08);
+            padding: 0.6rem;
+            border-radius: 50%;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .detail-text h3 {
+            margin: 0 0 0.35rem 0;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-muted);
+        }
+
+        .detail-text p, .detail-text a {
+            margin: 0;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--warm-espresso);
+            text-decoration: none;
+            line-height: 1.5;
+            transition: color 0.2s ease;
+        }
+
+        .detail-text a {
+            border-bottom: 1px dashed rgba(44,34,30,0.2);
+        }
+
+        .detail-text a:hover {
+            color: var(--gold-accent);
+            border-color: var(--gold-accent);
+        }
+
+        /* --- RIGHT SIDE: FORM STYLING --- */
+        .form-card {
+            background-color: var(--card-white);
+            padding: clamp(2rem, 4vw, 3rem);
+            border-radius: 12px;
+            border: 1px solid var(--border-grey);
+            box-shadow: 0 20px 40px rgba(44, 34, 30, 0.03);
+            transition: var(--transition-smooth);
+        }
+
+        .form-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 30px 50px rgba(44, 34, 30, 0.06);
+        }
+
+        .form-card h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 800;
+            font-size: clamp(1.4rem, 3vw, 1.8rem);
+            color: var(--warm-espresso);
+            margin-top: 0;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 0.75rem;
+        }
+
+        .form-card h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--gold-accent);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .input-group label {
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: var(--warm-espresso);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .input-group input,
+        .input-group textarea {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            padding: 1rem 1.25rem;
+            border: 1px solid var(--border-grey);
+            border-radius: 4px;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            transition: var(--transition-smooth);
+            background-color: #fbfbfa;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .input-group textarea {
+            resize: none;
+            min-height: 130px;
+        }
+
+        .input-group input:focus,
+        .input-group textarea:focus {
+            outline: none;
+            border-color: var(--gold-accent);
+            box-shadow: 0 8px 25px var(--focus-gold);
+            background-color: var(--card-white);
+            transform: translateY(-1px);
+        }
+
+        /* --- LUXURY BUTTON STYLING (UPDATED TO BRONZE/GOLD) --- */
+        .send-btn {
+            padding: 1.25rem;
+            background-color: var(--warm-espresso);
+            color: #ffffff;
+            border: 1px solid var(--gold-accent);
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            margin-top: 0.5rem;
+        }
+
+        .send-btn:hover {
+            background-color: var(--gold-accent);
+            color: var(--warm-espresso);
+            box-shadow: 0 12px 28px rgba(204, 164, 59, 0.25);
+            letter-spacing: 2.5px;
+        }
+
+        .send-btn:active {
+            transform: scale(0.99);
+        }
+
+        /* --- FULL WIDTH GOOGLE MAP LAYOUT --- */
+        .map-section-fullwidth {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            margin-top: 1rem;
+            margin-bottom: 0;
+            height: clamp(350px, 50vh, 500px);
+            border-top: 1px solid var(--border-grey);
+        }
+
+        .map-section-fullwidth iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+      <div class="nav-logo">
+        <a href="index.html">THE GRAND<span>HOTEL</span></a>
+      </div>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="room.html" class="dropbtn">Rooms <span class="arrow">▾</span></a>
+            <ul class="dropdown-content">
+              <li><a href="standard.html">Standard Room</a></li>
+              <li><a href="deluxe.html">Deluxe Room</a></li>
+              <li><a href="luxury.html">Luxury Room</a></li>
+              <li><a href="executive.html">Executive Room</a></li>
+            </ul>
+          </li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="room.html">Facilities</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="job.html">Job</a></li>
+        </ul>
+        <a href="booking.html" class="btn-book">Book Now</a>
+      </div>
+    </nav>
+
+    <!-- NEW RICH CHAMPAGNE LIGHT HERO BANNER -->
+    <header class="contact-hero">
+        <div class="hero-inner-content">
+            <h1>Connect With Us</h1>
+            <p>We are waiting to elevate your luxury experience</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="contact-grid">
+            
+            <!-- LEFT PANEL: DETAILS -->
+            <div class="info-panel">
+                <div class="info-card">
+                    <h2>Our Location</h2>
+                    
+                    <div class="contact-detail-item">
+                        <div class="icon-box">📍</div>
+                        <div class="detail-text">
+                            <h3>Hotel Address</h3>
+                            <p>24 Aguntasolo, Surulere, Lagos, Nigeria</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail-item">
+                        <div class="icon-box">✉️</div>
+                        <div class="detail-text">
+                            <h3>General Inquiries</h3>
+                            <p><a href="mailto:reservations@thegrandhotel.com">reservations@thegrandhotel.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail-item">
+                        <div class="icon-box">📞</div>
+                        <div class="detail-text">
+                            <h3>Concierge Desk</h3>
+                            <p><a href="tel:+23412345678">+234 (0) 1 234 5678</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT PANEL: MESSAGE FORM -->
+            <div class="form-card">
+                <h2>Send A Message</h2>
+                <form id="contactForm" class="contact-form">
+                    <div class="input-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" placeholder="Your Name" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="contactEmail">Email Address</label>
+                        <input type="email" id="contactEmail" placeholder="name@example.com" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" placeholder="Reservation, Feedback, Event Planning..." required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="How may our concierge assist you today?" required></textarea>
+                    </div>
+
+                    <button type="submit" class="send-btn">Send Message</button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <section class="map-section-fullwidth">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.385764024564!2d3.348633!3d6.47271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8bf93240b907%3A0xc391b156b825227d!2sAguntasolo%20St%2C%20Surulere%2C%20Lagos!5e0!3m2!1sen!2sng!4v1710000000000!5m2!1sen!2sng" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-column brand-info">
+          <h2>THE GRAND<span>HOTEL</span></h2>
+          <p>Experience exceptional hospitality in the heart of the city, where every detail has been meticulously crafted for your comfort.</p>
+        </div>
+        <div class="footer-column services-links">
+          <h3>Customer Service</h3>
+          <ul>
+            <li><a href="#">Inquiries & Reservations</a></li>
+            <li><a href="#">24/7 Guest Assistance</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-column contact-info">
+          <h3>Stay Connected</h3>
+          <p>Subscribe to receive exclusive offers, updates, and luxury travel inspiration.</p>
+          <form class="footer-newsletter">
+            <input type="email" placeholder="Your Email Address" required />
+            <button type="submit">→</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 The Grand Hotel. All rights reserved.</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com" aria-label="Facebook"><img src="assets/facebook.png" alt="Facebook" /></a>
+          <a href="https://www.twitter.com" aria-label="Twitter"><img src="assets/twitter.png" alt="Twitter" /></a>
+          <a href="https://www.instagram.com" aria-label="Instagram"><img src="assets/instagram.png" alt="Instagram" /></a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('fullName').value;
+            alert(`Thank you, ${name}. Your message has been routed to our front desk. A concierge agent will respond shortly.`);
+            this.reset();
+        });
+    </script>
+</body>
+</html>

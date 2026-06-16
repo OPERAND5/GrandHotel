@@ -1,0 +1,549 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        /* --- STYLING VARIABLES (Original Theme + Elements) --- */
+        :root {
+            --primary-blue: #1a365d;
+            --accent-blue: #2b6cb0;
+            --focus-blue: #4299e1;
+            --purple-btn: #553c9a;
+            --purple-hover: #44337a;
+            --bg-light: #f4f7f6;
+            --card-white: #ffffff;
+            --text-dark: #2d3748;
+            --text-muted: #718096;
+            --border-grey: #cbd5e0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- CONTENT MAIN WRAPPER --- */
+        .main-content {
+            flex: 1;
+            padding: 4rem 1rem;
+        }
+
+        .booking-container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 2.5rem;
+            background-color: var(--card-white);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+        }
+
+        .booking-form {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .form-section {
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 2rem;
+        }
+
+        .form-section:last-of-type {
+            border-bottom: none;
+        }
+
+        .form-section h3 {
+            font-size: 1.15rem;
+            color: var(--accent-blue);
+            margin-bottom: 1.25rem;
+            font-weight: 600;
+            margin-top: 0;
+        }
+
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        @media (max-width: 600px) {
+            .grid-2col {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .input-group label {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #4a5568;
+        }
+
+        .input-group input,
+        .input-group select {
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border-grey);
+            border-radius: 6px;
+            font-size: 1rem;
+            color: var(--text-dark);
+            transition: border-color 0.2s, box-shadow 0.2s;
+            background-color: #f7fafc;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus {
+            outline: none;
+            border-color: var(--focus-blue);
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+            background-color: var(--card-white);
+        }
+
+        .payment-options {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .radio-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .summary-section {
+            background-color: #f7fafc;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .summary-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .total-display {
+            text-align: right;
+        }
+
+        .total-display span {
+            display: block;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .price-tag {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        .terms-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: #4a5568;
+            line-height: 1.4;
+        }
+
+        .terms-group input {
+            margin-top: 0.2rem;
+            cursor: pointer;
+            width: auto;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--purple-btn);
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--purple-hover);
+        }
+
+        .submit-btn:active {
+            transform: scale(0.99);
+        }
+
+        .error-alert {
+            display: none;
+            background-color: #fff5f5;
+            color: #c53030;
+            padding: 1rem;
+            border-left: 4px solid #f56565;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+  <div class="nav-logo">
+    <a href="index.html">THE GRAND<span>HOTEL</span></a>
+  </div>
+  <div class="nav-menu">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="room.html" class="dropbtn">Rooms <span class="arrow">&#9662;</span></a>
+        <ul class="dropdown-content">
+          <li><a href="standard.html">Standard Room</a></li>
+          <li><a href="deluxe.html">Deluxe Room</a></li>
+          <li><a href="luxury.html">Luxury Room</a></li>
+          <li><a href="executive.html">Executive Room</a></li>
+        </ul>
+      </li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="room.html">Facilities</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="job.html">Job</a></li>
+    </ul>
+    <a href="#" class="btn-book">Book Now</a>
+  </div>
+</nav>
+
+<main class="main-content">
+        <div class="booking-container">
+            <h2 class="title">Secure Your Stay</h2>
+            <p class="subtitle" id="bookingSubtitle">Complete your reservation details below.</p>
+
+            <div id="errorAlert" class="error-alert"></div>
+
+            <form id="bookingForm" class="booking-form">
+                
+                <section class="form-section">
+                    <h3>1. Stay Details</h3>
+                    <div class="grid-2col">
+                        <div class="input-group">
+                            <label for="checkIn">Check-in Date</label>
+                            <input type="date" id="checkIn" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="checkOut">Check-out Date</label>
+                            <input type="date" id="checkOut" required>
+                        </div>
+                    </div>
+
+                    <div class="grid-2col">
+                        <div class="input-group">
+                            <label for="roomType">Selected Room Type</label>
+                            <select id="roomType">
+                                <option value="standard">Standard Room (₦25,000/night)</option>
+                                <option value="deluxe">Deluxe Suite (₦50,000/night)</option>
+                                <option value="luxury">Luxury Suite (₦100,000/night)</option>
+                                <option value="executive">Executive Penthouse (₦200,000/night)</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="guests">Number of Guests</label>
+                            <input type="number" id="guests" min="1" max="6" value="1" required>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="form-section">
+                    <h3>2. Guest Contact Information</h3>
+                    <div class="grid-2col">
+                        <div class="input-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" required>
+                        </div>
+                    </div>
+
+                    <div class="grid-2col">
+                        <div class="input-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="confirmEmail">Re-type Email</label>
+                            <input type="email" id="confirmEmail" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="phone">Contact Phone</label>
+                        <input type="tel" id="phone" placeholder="+1 (555) 000-0000" required>
+                    </div>
+                </section>
+
+                <section class="form-section">
+                    <h3>3. Select Payment Method</h3>
+                    <div class="payment-options">
+                        <label class="radio-label">
+                            <input type="radio" name="paymentMethod" value="card" checked>
+                            Credit / Debit Card
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="paymentMethod" value="paypal">
+                            PayPal
+                        </label>
+                    </div>
+                </section>
+
+                <section class="form-section summary-section">
+                    <div class="summary-details">
+                        <p>Calculated Stay: <strong id="stayNights">0 Nights</strong></p>
+                        <div class="total-display">
+                            <span>Amount Due:</span>
+                            <span class="price-tag" id="amountDue">₦0</span>
+                        </div>
+                    </div>
+
+                    <div class="terms-group">
+                        <input type="checkbox" id="acceptTerms" required>
+                        <label for="acceptTerms">
+                            I agree to the Grand Hotel Terms and Conditions and cancellation policies.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Complete Order</button>
+                </section>
+            </form>
+        </div>
+    </main>
+
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-column brand-info">
+      <h2>THE GRAND<span>HOTEL</span></h2>
+      <p>Experience exceptional hospitality in the heart of the city, where every detail has been meticulously crafted for your comfort.</p>
+    </div>
+    <div class="footer-column services-links">
+      <h3>Customer Service</h3>
+      <ul>
+        <li><a href="#">Inquiries & Reservations</a></li>
+        <li><a href="#">24/7 Guest Assistance</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-column contact-info">
+      <h3>Stay Connected</h3>
+      <p>Subscribe to receive exclusive offers, updates, and luxury travel inspiration.</p>
+      <form class="footer-newsletter">
+        <input type="email" placeholder="Your Email Address" required />
+        <button type="submit">→</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 The Grand Hotel. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com" aria-label="Facebook"><img src="assets/facebook.png" alt="Facebook" /></a>
+      <a href="https://www.twitter.com" aria-label="Twitter"><img src="assets/twitter.png" alt="Twitter" /></a>
+      <a href="https://www.instagram.com" aria-label="Instagram"><img src="assets/instagram.png" alt="Instagram" /></a>
+    </div>
+  </div>
+</footer>
+
+ <script>
+        const ROOM_PRICES = {
+            standard: { name: "Standard Room", price: 25000 },
+            deluxe: { name: "Deluxe Suite", price: 50000 },
+            luxury: { name: "Luxury Suite", price: 100000 },
+            executive: { name: "Executive Penthouse", price: 200000 }
+        };
+
+        const checkInInput = document.getElementById('checkIn');
+        const checkOutInput = document.getElementById('checkOut');
+        const roomTypeSelect = document.getElementById('roomType');
+        const bookingSubtitle = document.getElementById('bookingSubtitle');
+        const stayNightsDisplay = document.getElementById('stayNights');
+        const amountDueDisplay = document.getElementById('amountDue');
+        const errorAlert = document.getElementById('errorAlert');
+        const bookingForm = document.getElementById('bookingForm');
+
+        function setupDateRestrictions() {
+            const today = new Date().toISOString().split('T')[0];
+            checkInInput.min = today;
+            
+            checkInInput.addEventListener('change', () => {
+                if (checkInInput.value) {
+                    checkOutInput.min = checkInInput.value;
+                    if (checkOutInput.value && checkOutInput.value <= checkInInput.value) {
+                        checkOutInput.value = '';
+                    }
+                }
+                updatePrice();
+            });
+        }
+
+        function initializeRoomFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const roomParam = urlParams.get('room');
+
+            let selectedRoom = 'standard';
+            if (roomParam && ROOM_PRICES[roomParam.toLowerCase()]) {
+                selectedRoom = roomParam.toLowerCase();
+            }
+
+            roomTypeSelect.value = selectedRoom;
+            updateSubtitle(selectedRoom);
+        }
+
+        function updateSubtitle(roomKey) {
+            const roomInfo = ROOM_PRICES[roomKey];
+            bookingSubtitle.textContent = `You are reserving our ${roomInfo.name}.`;
+        }
+
+        function updatePrice() {
+            const checkInDate = checkInInput.value;
+            const checkOutDate = checkOutInput.value;
+            const selectedRoom = roomTypeSelect.value;
+
+            hideError();
+            updateSubtitle(selectedRoom);
+
+            if (checkInDate && checkOutDate) {
+                const start = new Date(checkInDate);
+                const end = new Date(checkOutDate);
+
+                const diffTime = end.getTime() - start.getTime();
+                const nights = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+                if (nights > 0) {
+                    const pricePerNight = ROOM_PRICES[selectedRoom].price;
+                    const totalCost = nights * pricePerNight;
+
+                    stayNightsDisplay.textContent = `${nights} Night${nights > 1 ? 's' : ''}`;
+                    amountDueDisplay.textContent = `₦${totalCost.toLocaleString()}`;
+                } else {
+                    stayNightsDisplay.textContent = '0 Nights';
+                    amountDueDisplay.textContent = '₦0';
+                    showError('Check-out date must be after the Check-in date.');
+                }
+            } else {
+                stayNightsDisplay.textContent = '0 Nights';
+                amountDueDisplay.textContent = '₦0';
+            }
+        }
+
+        function showError(message) {
+            errorAlert.textContent = message;
+            errorAlert.style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function hideError() {
+            errorAlert.style.display = 'none';
+        }
+
+        // Event Listeners
+        roomTypeSelect.addEventListener('change', updatePrice);
+        checkOutInput.addEventListener('change', updatePrice);
+
+        // Run Setup
+        setupDateRestrictions();
+        initializeRoomFromURL();
+        updatePrice();
+
+        bookingForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const confirmEmail = document.getElementById('confirmEmail').value;
+            
+            if (email !== confirmEmail) {
+                showError('Emails do not match. Please verify your email.');
+                return;
+            }
+
+            const start = new Date(checkInInput.value);
+            const end = new Date(checkOutInput.value);
+            if (end <= start) {
+                showError('Please adjust your stay dates before completing your order.');
+                return;
+            }
+
+            hideError();
+
+            const firstName = document.getElementById('firstName').value;
+            const roomName = ROOM_PRICES[roomTypeSelect.value].name;
+            alert(`Thank you, ${firstName}! Your order for the ${roomName} has been completed successfully.`);
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            // 1. Grab the parameters out of the address bar
+            const urlParams = new URLSearchParams(window.location.search);
+            const checkInParam = urlParams.get('checkin');   // Expects YYYY-MM-DD
+            const checkOutParam = urlParams.get('checkout'); // Expects YYYY-MM-DD
+            const roomParam = urlParams.get('room');
+
+            // 2. Find the input fields on your booking page
+            const checkInInput = document.getElementById('checkIn');   
+            const checkOutInput = document.getElementById('checkOut'); 
+            const roomSelect = document.getElementById('roomType');    
+
+            // 3. Automatically drop the dates into the inputs if they exist
+            if (checkInParam) {
+                checkInInput.value = checkInParam;
+            }
+            if (checkOutParam) {
+                checkOutInput.value = checkOutParam;
+            }
+            if (roomParam && roomSelect) {
+                roomSelect.value = roomParam;
+            }
+
+            // 4. Trigger your price calculation immediately so the user sees the total right away
+            if (typeof updatePrice === 'function') {
+                updatePrice(); 
+            }
+        });
+    </script>
+</body>
+</html> -->

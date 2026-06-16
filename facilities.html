@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Facilities | The Grand Hotel</title>
+    <style>
+        /* --- GOOGLE FONTS IMPORT --- */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap');
+
+        /* --- STYLING VARIABLES (Black & Gold Theme) --- */
+        :root {
+            --brand-black: #111111;
+            --brand-charcoal: #1a1a1a;
+            --gold-accent: #cca43b;
+            --gold-hover: #b38f2e;
+            --bg-light: #f9f9f9;
+            --card-white: #ffffff;
+            --text-dark: #111111;
+            --text-muted: #666666;
+            --border-grey: #eeeeee;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- HERO HEADER --- */
+        .facilities-hero {
+            text-align: center;
+            padding: 5rem 1rem 3rem 1rem;
+            background-color: var(--brand-black);
+            color: #ffffff;
+            border-bottom: 3px solid var(--gold-accent);
+        }
+
+        .facilities-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 3rem;
+            margin: 0 0 0.5rem 0;
+            letter-spacing: 1px;
+        }
+
+        .facilities-hero p {
+            font-size: 1.1rem;
+            color: var(--gold-accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+
+        /* --- GRID CONTAINER --- */
+        .main-content {
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 1rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        /* --- FACILITY CARD --- */
+        .facility-card {
+            background-color: var(--card-white);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            border: 1px solid var(--border-grey);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .facility-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(204, 164, 59, 0.1);
+            border-color: rgba(204, 164, 59, 0.3);
+        }
+
+        .facility-card h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--brand-black);
+            margin-top: 0;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            border-bottom: 2px solid var(--gold-accent);
+            padding-bottom: 0.5rem;
+        }
+
+        .facility-card h2 span {
+            font-size: 1.25rem;
+        }
+
+        .facility-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .facility-list li {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #333333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .facility-list li::before {
+            content: "•";
+            color: var(--gold-accent);
+            font-weight: bold;
+            display: inline-block; 
+            width: 1em;
+            margin-left: -0.25em;
+        }
+        
+        .facility-list li .item-text {
+            flex-grow: 1;
+            padding-left: 0.25rem;
+        }
+
+        /* --- SPECIALLY HIGHLIGHTED TAGS --- */
+        .badge {
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-charge {
+            background-color: #fff5f5;
+            color: #c53030;
+            border: 1px solid #feb2b2;
+        }
+
+        .badge-free {
+            background-color: #f0fff4;
+            color: #22543d;
+            border: 1px solid #9ae6b4;
+        }
+
+        .badge-info {
+            background-color: #f7fafc;
+            color: var(--brand-black);
+            border: 1px solid var(--border-grey);
+        }
+
+        /* --- RESPONSIVE FIXES --- */
+        @media (max-width: 480px) {
+            .facilities-grid {
+                grid-template-columns: 1fr;
+            }
+            .facilities-hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+      <div class="nav-logo">
+        <a href="index.html">THE GRAND<span>HOTEL</span></a>
+      </div>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="room.html" class="dropbtn">Rooms <span class="arrow">&#9662;</span></a>
+            <ul class="dropdown-content">
+              <li><a href="standard.html">Standard Room</a></li>
+              <li><a href="deluxe.html">Deluxe Room</a></li>
+              <li><a href="luxury.html">Luxury Room</a></li>
+              <li><a href="executive.html">Executive Room</a></li>
+            </ul>
+          </li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="facilities.html" class="active">Facilities</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="job.html">Job</a></li>
+        </ul>
+        <a href="booking.html" class="btn-book">Book Now</a>
+      </div>
+    </nav>
+
+    <header class="facilities-hero">
+        <h1>Hotel Amenities & Facilities</h1>
+        <p>World-Class Comfort Tailored For You</p>
+    </header>
+
+    <main class="main-content">
+        <div class="facilities-grid">
+
+            <!-- Bathroom -->
+            <div class="facility-card">
+                <h2><span>🛁</span> Bathroom</h2>
+                <ul class="facility-list">
+                    <li><span class="item-text">Bath or shower</span></li>
+                    <li><span class="item-text">Private bath & toilet</span></li>
+                    <li><span class="item-text">Free premium toiletries</span></li>
+                    <li><span class="item-text">Towels & Hairdryer</span></li>
+                    <li><span class="item-text">Toilet paper</span></li>
+                </ul>
+            </div>
+
+            <!-- Bedroom & Living -->
+            <div class="facility-card">
+                <h2><span>🛏️</span> Room Amenities</h2>
+                <ul class="facility-list">
+                    <li><span class="item-text">Luxury linen sets</span></li>
+                    <li><span class="item-text">Wardrobe or closet</span></li>
+                    <li><span class="item-text">Clothes rack</span></li>
+                    <li><span class="item-text">Electrical socket near the bed</span></li>
+                    <li><span class="item-text">Plush seating area with Sofa</span></li>
+                    <li><span class="item-text">Dedicated working desk</span></li>
+                </ul>
+            </div>
+
+            <!-- Outdoor Swimming Pool -->
+            <div class="facility-card">
+                <h2><span>🏊‍</span> Outdoor Pool</h2>
+                <ul class="facility-list">
+                    <li><span class="item-text">All ages welcome</span> <span class="badge badge-free">Free!</span></li>
+                    <li><span class="item-text">Open all year round</span></li>
+                    <li><span class="item-text">Shallow end for safety</span></li>
+                    <li><span class="item-text">Pool / beach towels provided</span></li>
+                    <li><span class="item-text">Exclusive Pool bar access</span></li>
+                    <li><span class="item-text">Secure fence around pool</span></li>
+                </ul>
+            </div>
+
+            <!-- Food & Drink -->
+            <div class="facility-card">
+                <h2><span>🍽️</span> Food & Drink</h2>
+                <ul class="facility-list">
+                    <li><span class="item-text">Fine Dining Restaurant & Bar</span></li>
+                    <li><span class="item-text">In-room breakfast service</span></li>
+                    <li><span class="item-text">Snack bar</span></li>
+                    <li><span class="item-text">Tea / Coffee maker in all rooms</span></li>
+                    <li><span class="item-text">Special diet menus</span> <span class="badge badge-info">On Request</span></li>
+                    <li><span class="item-text">Wine / Champagne</span> <span class="badge badge-charge">Extra Charge</span></li>
+                    <li><span class="item-text">Gourmet Kid meals</span> <span class="badge badge-charge">Extra Charge</span></li>
+                </ul>
+            </div>
+
+            <!-- Services & Reception -->
+            <div class="facility-card">
+                <h2><span>🛎️</span> Reception & Cleaning</h2>
+                <ul class="facility-list">
+                    <li><span class="item-text">24-hour front desk assistance</span></li>
+                    <li><span class="item-text">Dedicated Concierge service</span></li>
+                    <li><span class="item-text">Daily housekeeping</span></li>
+                    <li><span class="item-text">Digital invoice provision</span></li>
+                    <li><span class="item-text">Laundry & Dry cleaning</span> <span class="badge badge-charge">Extra Charge</span></li>
+                    <li><span class="item-text">Premium Ironing service</span> <span class="badge badge-charge">Extra Charge</span></li>
+                </ul>
+            </div>
+
+            <!-- Safety & Security -->
+            <div class="facility-card">
+                <h2><span>🛡️</span> Safety & Security</h2>
+                <ul class="facility-list">
+                    <li><span class="item-text">24-hour manned security</span></li>
+                    <li><span class="item-text">Secure key card room access</span></li>
+                    <li><span class="item-text">CCTV inside common areas</span></li>
+                    <li><span class="item-text">CCTV outside property lines</span></li>
+                    <li><span class="item-text">Smoke alarms & fire extinguishers</span></li>
+                    <li><span class="item-text">Integrated security alarm system</span></li>
+                </ul>
+            </div>
+
+            <!-- General Facilities -->
+            <div class="facility-card">
+                <h2><span>⚙️</span> General Facilities</h2>
+                <ul class="facility-list">
+                    <li><span class="item-text">Full indoor Air conditioning</span></li>
+                    <li><span class="item-text">Soundproof guest rooms</span></li>
+                    <li><span class="item-text">Polished tile / marble flooring</span></li>
+                    <li><span class="item-text">Central heating & cooling fan</span></li>
+                    <li><span class="item-text">Shared lounge & TV recreation area</span></li>
+                    <li><span class="item-text">Designated smoking zone area</span></li>
+                    <li><span class="item-text">Non-smoking throughout spaces</span></li>
+                </ul>
+            </div>
+
+            <!-- Wellness & Activities -->
+            <div class="facility-card">
+                <h2><span>💪</span> Wellness & Recreation</h2>
+                <ul class="facility-list">
+                    <li><span class="item-text">Fully equipped Fitness Centre</span></li>
+                    <li><span class="item-text">Sun loungers & beach chairs</span></li>
+                    <li><span class="item-text">Therapeutic Public Bath access</span></li>
+                    <li><span class="item-text">Vibrant evening entertainment</span> <span class="badge badge-charge">Extra Charge</span></li>
+                </ul>
+            </div>
+
+            <!-- Accessibility & Business -->
+            <div class="facility-card">
+                <h2><span>🤝</span> Accessibility & Logistics</h2>
+                <ul class="facility-list">
+                    <li><span class="item-text">Facilities for disabled guests</span></li>
+                    <li><span class="item-text">Wheelchair accessible layout</span></li>
+                    <li><span class="item-text">Visual aids (Braille markings)</span></li>
+                    <li><span class="item-text">Premium Shuttle service availability</span></li>
+                    <li><span class="item-text">Meeting / Banquet rooms</span> <span class="badge badge-charge">Extra Charge</span></li>
+                    <li><span class="item-text">Fax & photocopying access</span> <span class="badge badge-charge">Extra Charge</span></li>
+                </ul>
+            </div>
+
+            <!-- Parking & Connectivity -->
+            <div class="facility-card">
+                <h2><span>🚗</span> Parking & Internet</h2>
+                <ul class="facility-list">
+                    <li><span class="item-text">Free secure private parking</span> <span class="badge badge-free">No Booking Needed</span></li>
+                    <li><span class="item-text">Internet Access</span> <span class="badge badge-charge" style="background-color:#f7fafc; color:#718096; border-color:#e2e8f0;">Not Available</span></li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-column brand-info">
+          <h2>THE GRAND<span>HOTEL</span></h2>
+          <p>Experience exceptional hospitality in the heart of the city, where every detail has been meticulously crafted for your comfort.</p>
+        </div>
+        <div class="footer-column services-links">
+          <h3>Customer Service</h3>
+          <ul>
+            <li><a href="#">Inquiries & Reservations</a></li>
+            <li><a href="#">24/7 Guest Assistance</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-column contact-info">
+          <h3>Stay Connected</h3>
+          <p>Subscribe to receive exclusive offers, updates, and luxury travel inspiration.</p>
+          <form class="footer-newsletter">
+            <input type="email" placeholder="Your Email Address" required />
+            <button type="submit">→</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Grand Hotel. All rights reserved.</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com" aria-label="Facebook"><img src="assets/facebook.png" alt="Facebook" /></a>
+          <a href="https://www.twitter.com" aria-label="Twitter"><img src="assets/twitter.png" alt="Twitter" /></a>
+          <a href="https://www.instagram.com" aria-label="Instagram"><img src="assets/instagram.png" alt="Instagram" /></a>
+        </div>
+      </div>
+    </footer>
+
+</body>
+</html>

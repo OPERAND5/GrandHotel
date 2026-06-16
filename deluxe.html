@@ -24,11 +24,11 @@
                             <li><a href="standard.html">Standard Room</a></li>
                             <li><a href="deluxe.html">Deluxe Room</a></li>
                             <li><a href="luxury.html">Luxury Room</a></li>
-                            <li><a href="#">Executive Room</a></li>
+                            <li><a href="executive.html">Executive Room</a></li>
                         </ul>
                     </li>
                     <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="#">Facilities</a></li>
+                    <li><a href="facilities.html">Facilities</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">Job</a></li>
                 </ul>
@@ -41,76 +41,72 @@
                 <h1>Deluxe Room Booking</h1>
                 <p>Enjoy your stay and review real-time availability fields below.</p>
             </div>
+            
             <section class="room-details">
-    <div class="luxury-gallery-container">
-        
-        <div class="gallery-thumbs-stack">
-            
-            <div class="thumb-wrapper active" onclick="updateShowcase(this)">
-                <img src="assets/deluxe1Bed.jpg" alt="Deluxe Bed View">
-                <div class="thumb-overlay">
-                    <span class="thumb-meta">Item 1/3</span>
-                    <p class="thumb-title">Deluxe Bed View</p>
+                <div class="luxury-gallery-container">
+                    <div class="gallery-thumbs-stack">
+                        <div class="thumb-wrapper active" onclick="updateShowcase(this)">
+                            <img src="assets/deluxe1Bed.jpg" alt="Deluxe Bed View">
+                            <div class="thumb-overlay">
+                                <span class="thumb-meta">Item 1/3</span>
+                                <p class="thumb-title">Deluxe Bed View</p>
+                            </div>
+                        </div>
+                        
+                        <div class="thumb-wrapper" onclick="updateShowcase(this)">
+                            <img src="assets/deluxeRestroom.jpg" alt="Deluxe Restroom View">
+                            <div class="thumb-overlay">
+                                <span class="thumb-meta">Item 2/3</span>
+                                <p class="thumb-title">Deluxe Restroom View</p>
+                            </div>
+                        </div>
+
+                        <div class="thumb-wrapper" onclick="updateShowcase(this)">
+                            <img src="assets/deluxeTable.jpg" alt="Deluxe Desk View">
+                            <div class="thumb-overlay">
+                                <span class="thumb-meta">Item 3/3</span>
+                                <p class="thumb-title">Deluxe Desk View</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-main-showcase">
+                        <img id="premiumShowcaseTarget" src="assets/deluxe1Bed.jpg" alt="Room Main View">
+                        <div class="showcase-caption-bar">
+                            <h3 id="showcaseTitleTarget">Deluxe Bed View</h3>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="thumb-wrapper" onclick="updateShowcase(this)">
-                <img src="assets/deluxeRestroom.jpg" alt="Deluxe Restroom View">
-                <div class="thumb-overlay">
-                    <span class="thumb-meta">Item 2/3</span>
-                    <p class="thumb-title">Deluxe Restroom View</p>
+            </section>
+
+            <section class="room-info-wrapper">
+                <div class="info-block description-box">
+                    <h2 class="hotel-section-title">The Space</h2>
+                    <div class="title-divider"></div>
+                    <p class="hotel-description-text">
+                        <strong>Deluxe Room:</strong> Deluxe Room: Bed 6ft/5ft, Room Size 13.8ft/10.8ft, Accommodates- 2, Wireless internet, and complimentary breakfast. <span class="highlight-text">6.5ft × 4.5ft</span> bed and a spacious <span class="highlight-text">9.10ft × 10ft</span> floor plan. Designed to comfortably accommodate up to 2 guests, inclusive of high-speed wireless internet and a daily complimentary breakfast.
+                    </p>
                 </div>
-            </div>
 
-            <div class="thumb-wrapper" onclick="updateShowcase(this)">
-                <img src="assets/deluxeTable.jpg" alt="Deluxe Desk View">
-                <div class="thumb-overlay">
-                    <span class="thumb-meta">Item 3/3</span>
-                    <p class="thumb-title">Deluxe Desk View</p>
+                <div class="info-block amenities-box">
+                    <h2 class="hotel-section-title">Amenities & Comforts</h2>
+                    <div class="title-divider"></div>
+                    <ul class="hotel-amenities-list">
+                        <li><span class="amenity-icon">✦</span> Air Conditioning</li>
+                        <li><span class="amenity-icon">✦</span> Free High-Speed Wi-Fi</li>
+                        <li><span class="amenity-icon">✦</span> Smart Flat-screen TV</li>
+                        <li><span class="amenity-icon">✦</span> Fully Stocked Mini Fridge</li>
+                        <li><span class="amenity-icon">✦</span> Free Daily Complimentary Breakfast</li>
+                        <li><span class="amenity-icon">✦</span> Daily Housekeeping</li>
+                    </ul>
                 </div>
-            </div>
-            
-        </div>
-
-        <div class="gallery-main-showcase">
-            <img id="premiumShowcaseTarget" src="assets/deluxe1Bed.jpg" alt="Room Main View">
-            <div class="showcase-caption-bar">
-                <h3 id="showcaseTitleTarget">Deluxe Bed View</h3>
-            </div>
-        </div>
-    </div>
-  </section>
-    </div>
-
-        <section class="room-info-wrapper">
-    <!-- Left Box: Description Block -->
-    <div class="info-block description-box">
-        <h2 class="hotel-section-title">The Space</h2>
-        <div class="title-divider"></div>
-        <p class="hotel-description-text">
-            <strong>Deluxe Room:</strong>Deluxe Room: Bed 6ft/5ft, Room Size 13.8ft/10.8ft, Accommodates- 2, Wireless internet, and complimentary breakfast. <span class="highlight-text">6.5ft × 4.5ft</span> bed and a spacious <span class="highlight-text">9.10ft × 10ft</span> floor plan. Designed to comfortably accommodate up to 2 guests, inclusive of high-speed wireless internet and a daily complimentary breakfast.
-        </p>
-    </div>
-
-    <!-- Right Box: Amenities Block -->
-    <div class="info-block amenities-box">
-        <h2 class="hotel-section-title">Amenities & Comforts</h2>
-        <div class="title-divider"></div>
-        <ul class="hotel-amenities-list">
-            <li><span class="amenity-icon">✦</span> Air Conditioning</li>
-            <li><span class="amenity-icon">✦</span> Free High-Speed Wi-Fi</li>
-            <li><span class="amenity-icon">✦</span> Smart Flat-screen TV</li>
-            <li><span class="amenity-icon">✦</span> Fully Stocked Mini Fridge</li>
-            <li><span class="amenity-icon">✦</span> Free Daily Complimentary Breakfast</li>
-            <li><span class="amenity-icon">✦</span> Daily Housekeeping</li>
-        </ul>
-    </div>
-</section>
+            </section>
  
             <section class="booking-calendar-wrapper">
                 <div class="booking-form-box">
                     <h2>Book Your Room</h2>
-                    <form class="hotel-booking-form" id="bookingForm" onsubmit="event.preventDefault();">
+                    
+                    <form class="hotel-booking-form" id="hotelBookingForm">
                         
                         <div class="form-group">
                             <label for="checkin">Check-In Date</label>
@@ -133,14 +129,18 @@
                             </select>
                         </div>
 
-                        <button type="submit" class="btn-submit-booking">Check Availability</button>
+                        <div id="calendarError" style="display: none; color: #e53e3e; font-size: 0.85rem; margin-bottom: 10px; font-weight: 500;"></div>
+
+                        <div class="button-action-container">
+                            <button type="submit" class="btn-book-now" style="width: 100%; border: none; cursor: pointer; display: block; text-align: center;">Check Availability</button>
+                        </div>
                     </form>
                 </div>
 
                 <div class="calendar-availability-box">
                     <div class="calendar-header-info">
                         <h3>Room Availability</h3>
-                        <p class="calendar-rate">₦25,000 <span>/ Night</span></p>
+                        <p class="calendar-rate">50,000 <span>/ Night</span></p>
                     </div>
                     
                     <div class="calendar-month-title">June 2026</div>
@@ -227,9 +227,30 @@
                 </div>
             </div>
         </footer>
-
     </div>
 
     <script src="script.js"></script>
+    <script>
+        // Form Validation & URL Transfer System
+        document.getElementById('hotelBookingForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Stop page from blank reloading
+
+            const checkInVal = document.getElementById('checkin').value;
+            const checkOutVal = document.getElementById('checkout').value;
+            const errorBanner = document.getElementById('calendarError');
+
+            // 1. Double check dates form sequence integrity
+            if (new Date(checkOutVal) <= new Date(checkInVal)) {
+                errorBanner.textContent = "Error: Check-out date must be after your Check-in date.";
+                errorBanner.style.display = "block";
+                return;
+            }
+
+            errorBanner.style.display = "none";
+
+            // 2. Safely jump to checkout form passing room type, check-in, and check-out selections!
+            window.location.href = `test.html?room=deluxe&checkin=${checkInVal}&checkout=${checkOutVal}`;
+        });
+    </script>
 </body>
 </html>
