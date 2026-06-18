@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="job.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blue.css">
+    <title>Careers | The Grand Hotel</title>
+</head>
+<body>
+            <nav class="navbar">
+            <div class="nav-logo">
+                <a href="index.html">THE GRAND<span>HOTEL</span></a>
+            </div>
+
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="room.html" class="dropbtn">Rooms <span class="arrow">&#9662;</span></a>
+                        <ul class="dropdown-content">
+                            <li><a href="standard.html">Standard Room</a></li>
+                            <li><a href="deluxe.html">Deluxe Room</a></li>
+                            <li><a href="luxury.html">Luxury Room</a></li>
+                            <li><a href="executive.html">Executive Room</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="facilities.html">Facilities</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="job.html">Job</a></li>
+                </ul>
+                <a href="booking.html" class="btn-book">Book Now</a>
+            </div>
+        </nav>
+    <div class="job-container">
+        <h1>Current Openings</h1>
+        <p>Join our team at The Grand Hotel. Select a position below to view details and apply.</p>
+        
+        <div class="job-list" id="jobList">
+            <button onclick="showJob('manager')">Hotel Manager</button>
+            <button onclick="showJob('admin')">Admin Officer</button>
+            <button onclick="showJob('keeper')">Hotel Keeper</button>
+            <button onclick="showJob('gateman')">Gateman</button>
+            <button onclick="showJob('cleaner')">Cleaner</button>
+        </div>
+
+        <div id="jobDetails" class="hidden">
+            <h2 id="jobTitle">Position Title</h2>
+            
+            <div class="job-content">
+                <h3>About the Role</h3>
+                <p id="jobDescription"></p>
+                <h3>Requirements & Qualifications</h3>
+                <div id="jobRequirements"></div>
+            </div>
+            
+            <form id="applicationForm">
+                <h3>Submit Your Application</h3>
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="cv">Upload CV (PDF or Word):</label>
+                    <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+                </div>
+                <div class="form-group">
+                    <label>Cover Letter / Why are you a good fit?</label>
+                    <textarea rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Submit Application</button>
+            </form>
+        </div>
+    </div>
+    <section>
+  <footer class="site-footer">
+  <div class="footer-container">
+    
+    <div class="footer-column brand-info">
+      <h2>THE GRAND<span>HOTEL</span></h2>
+      <p>Experience exceptional hospitality in the heart of the city, where every detail has been meticulously crafted for your comfort.</p>
+    </div>
+
+    <div class="footer-column services-links">
+      <h3>Customer Service</h3>
+      <ul>
+        <li><a href="#">Inquiries & Reservations</a></li>
+        <li><a href="#">24/7 Guest Assistance</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column contact-info">
+      <h3>Stay Connected</h3>
+      <p>Subscribe to receive exclusive offers, updates, and luxury travel inspiration.</p>
+      <form class="footer-newsletter">
+        <input type="email" placeholder="Your Email Address" required />
+        <button type="submit">→</button>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+  <p>&copy; 2026 The Grand Hotel. All rights reserved.</p>
+
+  <div class="social-icons">
+    <a href="https://www.facebook.com" aria-label="Facebook"><img src="assets/facebook.png" alt="Facebook" /></a>
+    <a href="https://www.twitter.com" aria-label="Twitter"><img src="assets/twitter.png" alt="Twitter" /></a>
+    <a href="https://www.instagram.com" aria-label="Instagram"><img src="assets/instagram.png" alt="Instagram" /></a>
+  </div>
+</div>
+</section>
+    <script src="job.js"></script>
+</body>
+</html>

@@ -383,13 +383,13 @@ section:has(.experience) {
 .deluxe .btn-book { color: #2b3542; }
 .deluxe .btn-book:hover { background: #2b3542; color: #fff; }
 
-.luxury {
-  background-color: #1a1a1a;
+.lux {
+  background-color:  #2b3542; ;
   color: #ffffff;
 }
-.luxury p:first-of-type { color: #c5a880; } 
-.luxury .btn-book { color: #c5a880; border-color: #c5a880; }
-.luxury .btn-book:hover { background: #c5a880; color: #1a1a1a; }
+.lux p:first-of-type { color: #c5a880; } 
+.lux .btn-book { background: #2b3542; color: #fff; }
+
 
 .executive {
   background-color: #B76E79;

@@ -1,0 +1,185 @@
+/* ==================================
+   AQUA BOREALIS COLOR OVERRIDE
+   ================================== */
+
+:root{
+  --primary:#145089;
+  --secondary:#0E9A7A;
+  --accent:#70BCDB;
+  --light:#9AE4F5;
+  --dark:#303B4B;
+  --text:#1F2937;
+}
+
+.home{
+  min-height:100vh;
+  background:
+    linear-gradient(
+      rgba(20,80,137,.35),
+      rgba(48,59,75,.25)
+    ),
+    /* url("assets/home.jpg"); */
+    url('https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600') no-repeat center center/cover;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+/* REPLACE ALL GOLD */
+.nav-logo span,
+.nav-links a:hover,
+.dropdown-content li a:hover,
+.luxury p:first-of-type,
+.luxury .btn-book,
+.booking-input:focus,
+.widget-title span,
+.card-badge,
+.footer-column h2 span,
+.footer-column h3,
+.services-links a:hover,
+.footer-newsletter button,
+.count-btn:hover,
+.price-breakdown .total-row,
+section:has(.pool-image) img[class$="-image"]:hover + p{
+    color: var(--primary) !important;
+}
+
+/* GOLD BORDERS */
+.dropdown-content,
+.footer-newsletter:focus-within,
+.luxury .btn-book,
+.booking-input:focus,
+.input-group input:focus{
+    border-color: var(--primary) !important;
+}
+
+/* BUTTONS */
+.btn-book,
+.widget-submit-btn,
+.btn-back,
+.submit-btn{
+    background: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color:#fff !important;
+}
+
+.btn-book:hover,
+.widget-submit-btn:hover,
+.btn-back:hover,
+.submit-btn:hover{
+    background: var(--secondary) !important;
+    border-color: var(--secondary) !important;
+}
+
+/* TESTIMONIALS */
+.testimonial-card{
+    border-top:4px solid var(--primary) !important;
+}
+
+/* AMENITIES */
+.amenities-list::before{
+    color:rgba(20,80,137,.15) !important;
+}
+
+/* IMAGE HOVER */
+section:has(.pool-image) img[class$="-image"]:hover{
+    box-shadow:0 15px 30px rgba(20,80,137,.35) !important;
+}
+
+/* SCROLLBAR */
+section:has(.pool-image)::-webkit-scrollbar-thumb{
+    background:var(--primary) !important;
+}
+
+/* SOCIAL ICONS */
+.social-icons a:hover{
+    background:var(--primary) !important;
+    border-color:var(--primary) !important;
+}
+
+/* FOOTER */
+footer{
+    background: var(--text) !important;
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    box-shadow:0 4px 20px rgba(20,80,137,.12);
+    border-top:1px solid rgba(20,80,137,.15);
+}
+.footer-newsletter button{
+    color:var(--primary) !important;
+}
+
+/* ROOM COLORS - COMPLETE REDESIGN */
+.standard{
+    background:#EAF7FB !important;
+    color:#000 !important;
+}
+
+.deluxe{
+    background:#D8EEF7 !important;
+    color:#000 !important;
+}
+
+.executive{
+    background:#C5E6F4 !important;
+    color:#000 !important;
+}
+
+.luxury{
+    background:#303B4B !important;
+    color:#fff !important;
+}
+
+.luxury p:first-of-type{
+    color:#70BCDB !important;
+}
+
+.luxury .btn-book:hover{
+    background:#70BCDB !important;
+    color:#303B4B !important;
+}
+
+/* ==================================
+   NAVBAR - LIGHTER AQUA BOREALIS
+   ================================== */
+
+.navbar{
+    background: rgba(154, 228, 245, 0.92) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(20, 80, 137, 0.12);
+    border-bottom: 1px solid rgba(20, 80, 137, 0.15);
+}
+
+.nav-logo a{
+    color: #303B4B !important;
+    font-weight: 700;
+}
+
+.nav-logo span{
+    color: #145089 !important;
+}
+
+.nav-links a{
+    color: #303B4B !important;
+    font-weight: 600;
+    transition: all .3s ease;
+}
+
+.nav-links a:hover{
+    color: #145089 !important;
+}
+
+.dropdown-content{
+    background: #ffffff !important;
+    border: 1px solid rgba(20,80,137,.15);
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.dropdown-content li a{
+    color: #303B4B !important;
+}
+
+.dropdown-content li a:hover{
+    background: #EAF7FB !important;
+    color: #145089 !important;
+}
